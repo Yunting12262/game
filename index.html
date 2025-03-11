@@ -94,6 +94,59 @@
 
   	<!-- 游戏页面 -->
   	<div id="game-screen" class="div" style="display: none;">
+        <!-- Tutorial Overlays -->
+        <div id="tutorial-1" class="tutorial-overlay" onclick="nextTutorial(1)">
+            <div class="tutorial-background"></div>
+            <div class="tutorial-welcome">
+                <p>Hi new editor!</p>
+                <p>Welcome to our game!</p>
+            </div>
+        </div>
+
+        <div id="tutorial-2" class="tutorial-overlay" onclick="nextTutorial(2)">
+            <div class="tutorial-highlight numbers-highlight" style="left: 30px; top: 85px; width: 450px; height: 120px;"></div>
+            <div class="tutorial-text no-bg" style="left: 500px; top: 120px;">
+                As you can see, here's the round you're in!
+            </div>
+        </div>
+
+        <div id="tutorial-3" class="tutorial-overlay" onclick="nextTutorial(3)">
+            <div class="tutorial-highlight numbers-highlight" style="left: 50px; top: 200px; width: 400px; height: 400px;"></div>
+            <div class="tutorial-text no-bg" style="left: 500px; top: 280px;">
+                Here you would see the change in the impact values of the rounds you experience!
+            </div>
+        </div>
+
+        <div id="tutorial-4" class="tutorial-overlay" onclick="nextTutorial(4)">
+            <div class="tutorial-highlight numbers-highlight" style="right: 80px; top: 140px; width: 240px; height: 140px;"></div>
+            <div class="tutorial-text no-bg" style="right: 100px; top: 80px;">
+                Click "New Post" to start creating your first video!
+            </div>
+        </div>
+
+        <!-- 添加新的回合结束后的教程 -->
+        <div id="post-round-tutorial-1" class="tutorial-overlay" onclick="nextPostRoundTutorial(1)">
+            <div class="tutorial-highlight numbers-highlight" style="left: 30px; top: 200px; width: 400px; height: 400px;"></div>
+            <div class="tutorial-text no-bg" style="left: 450px; top: 280px;">
+                You'll see if the moral impact of your account grows or decreases after the video is posted, as well as how your income grows. 
+                Note that the content of your story is tied to your moral values, which significantly affect your ending of the game!!!
+            </div>
+        </div>
+
+        <div id="post-round-tutorial-2" class="tutorial-overlay" onclick="nextPostRoundTutorial(2)">
+            <div class="tutorial-highlight numbers-highlight" style="left: 50%; top: 50%; transform: translate(-50%, -50%); width: 600px; height: 400px;"></div>
+            <div class="tutorial-text no-bg" style="left: 50%; top: 30%; transform: translateX(-50%);">
+                You can see the video you just posted
+            </div>
+        </div>
+
+        <div id="post-round-tutorial-3" class="tutorial-overlay" onclick="nextPostRoundTutorial(3)">
+            <div class="tutorial-highlight numbers-highlight" style="right: 80px; top: 300px; width: 300px; height: 400px;"></div>
+            <div class="tutorial-text no-bg" style="right: 400px; top: 400px;">
+                You could pay more attention to the comments and views of the video to learn lessons for your next video editing.
+            </div>
+        </div>
+
   		<img class="c12a808a6c0949659e2151480dbe61-icon" alt="" src="C12A808A6C0949659E2151480DBE6116[21196] 1.png">
   		
   		<!-- 左侧进度面板 -->
@@ -200,7 +253,31 @@
   	
   	<!-- 编辑器页面 -->
   	<div id="editor-screen" class="main-frame-background-parent" style="display: none;">
-  		<!-- 背景 -->
+        <!-- Editor Tutorial Overlays -->
+        <div id="editor-tutorial-1" class="tutorial-overlay" onclick="nextEditorTutorial(1)">
+            <div class="tutorial-highlight numbers-highlight" style="left: 30px; top: 30px; width: 560px; height: 60px;"></div>
+            <div class="tutorial-text no-bg" style="left: 600px; top: 40px;">
+                This is the subject of our first story. The content you edit will be relevant to this topic.
+            </div>
+        </div>
+
+        <div id="editor-tutorial-2" class="tutorial-overlay" onclick="nextEditorTutorial(2)">
+            <div class="tutorial-highlight numbers-highlight" style="left: 30px; top: 140px; width: 400px; height: 100px;"></div>
+            <div class="tutorial-text no-bg" style="left: 470px; top: 150px;">
+                And this is actual fact of this story.
+				As an editor, you can decide how to tell the story to get the results you want.
+            </div>
+        </div>
+
+        <div id="editor-tutorial-3" class="tutorial-overlay" onclick="nextEditorTutorial(3)">
+            <div class="tutorial-highlight numbers-highlight" style="left: 230px; top: 230px; width: 190px; height: 200px;"></div>
+            <div class="tutorial-text no-bg" style="left: 450px; top: 260px;">
+                Now try dragging clips and changing the order to create a new video!
+                <img src="Arrow 2.png" alt="→" style="display: block; margin-top: 10px;">
+            </div>
+        </div>
+
+        <!-- 背景 -->
   		<img class="c12a808a6c0949659e2151480dbe61-icon" alt="" src="C12A808A6C0949659E2151480DBE6116[21196] 1.png">
   		
   		<!-- 标题栏 -->
@@ -226,7 +303,7 @@
   				<!-- Facts 区域 -->
   				<div class="facts-section">
   					<div class="facts-title">Facts</div>
-  					<div class="facts-text">The Delivery Man Witnesses An Elderly Person Falling And Tries To React.</div>
+  					<div class="facts-text">A famous actor was caught in a scandal involving a restaurant's public welfare commitment.</div>
   					<!-- 缩略图区域 -->
   					<div class="thumbnails">
   						<div id="thumbnail-0" class="thumbnail" draggable="true">
@@ -292,8 +369,30 @@
   	</div>
 
   	<div class="preview-area" style="display: none;">
-  		<div class="preview-header">
-  			<div class="round-title">Round 3: Delivery Man Accident</div>
+        <!-- Preview Tutorial Overlays -->
+        <div id="preview-tutorial-1" class="tutorial-overlay" onclick="nextPreviewTutorial(1)">
+            <div class="tutorial-highlight numbers-highlight" style="left: 50%; bottom: 120px; width: 1000px; height: 100px; transform: translateX(-50%);"></div>
+            <div class="tutorial-text no-bg" style="left: 50%; bottom: 230px; transform: translateX(-50%);">
+                This is a description of the story your video will tell, and if it doesn't meet your expectations, you can click Back to go back to the edit page to rearrange your video.
+            </div>
+        </div>
+
+        <div id="preview-tutorial-2" class="tutorial-overlay" onclick="nextPreviewTutorial(2)">
+            <div class="tutorial-highlight numbers-highlight" style="left: 30px; top: 150px; width: 300px; height: 100px;"></div>
+            <div class="tutorial-text no-bg" style="left: 350px; top: 170px;">
+                Here you can see how your upcoming video will change your revenue. It is highly relevant to the content of the video you are making.
+            </div>
+        </div>
+
+        <div id="preview-tutorial-3" class="tutorial-overlay" onclick="nextPreviewTutorial(3)">
+            <div class="tutorial-highlight numbers-highlight" style="right: 30px; top: 150px; width: 200px; height: 60px;"></div>
+            <div class="tutorial-text no-bg" style="right: 240px; top: 160px;">
+                You could upload videos to social media when you confirm this is what you want!
+            </div>
+        </div>
+
+        <div class="preview-header">
+  			<div class="round-title">Round 1: Actor's scandal</div>
   		</div>
   		<div class="preview-window">
   			<div class="window-header">
@@ -323,8 +422,8 @@
   						</button>
   					</div>
   					<div class="video-container"></div>
-  					<div class="preview-title">"The Nursing Home Caregiver Fails In Their Duty Again As The Elderly Person Walks Alone Toward The Gate!"</div>
-  					<div class="preview-subtitle">The nursing home operates like a captivity system, showing no concern for the well-being of the elderly and lacking any sense of responsibility!</div>
+  					<div class="preview-title">"Famous Actor's Restaurant Exposed: Public Welfare Commitment Just a PR Stunt!"</div>
+  					<div class="preview-subtitle">The restaurant's so-called charity program turns out to be nothing more than a marketing strategy, completely ignoring its social responsibilities!</div>
   				</div>
   			</div>
   		</div>
