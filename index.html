@@ -27,10 +27,71 @@
     		</div>
     		<div class="rectangle-div">
     		</div>
-    		<div class="new-game" onclick="switchScreen('game-screen')">New Game</div>
+    		<div class="new-game" onclick="switchScreen('opening-story1')">New Game</div>
     		<div class="exit">Exit</div>
   	</div>
-  	
+
+    <!-- 开场故事 1 -->
+    <div id="opening-story1" class="frame" style="display: none;" onclick="switchScreen('opening-story2')">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group opening1-bg">
+                <div class="group"></div>
+                <p class="you-once-believed-in">
+                    "You once believed in capturing the world as it truly is. You tried to report the truth, but reality
+                    doesn't sell—drama does."
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 开场故事 2 -->
+    <div id="opening-story2" class="frame" style="display: none;" onclick="switchScreen('opening-story3')">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group opening2-bg">
+                <div class="group"></div>
+                <p class="you-once-believed-in">
+                    "Now, you've mastered the art of crafting narratives that captivate audiences."
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 开场故事 3 -->
+    <div id="opening-story3" class="frame" style="display: none;" onclick="switchScreen('opening-story4')">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group opening3-bg">
+                <div class="group"></div>
+                <p class="you-once-believed-in">
+                    "Your stories shape public opinion, influence decisions, and change lives."
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 开场故事 4 -->
+    <div id="opening-story4" class="frame" style="display: none;" onclick="switchScreen('opening-story5')">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group opening4-bg">
+                <div class="group"></div>
+                <p class="you-once-believed-in">
+                    "But at what cost? The line between truth and fiction grows thinner each day."
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 开场故事 5 -->
+    <div id="opening-story5" class="frame" style="display: none;" onclick="switchScreen('game-screen')">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group opening5-bg">
+                <div class="group"></div>
+                <p class="you-once-believed-in">
+                    "Welcome to the Battle of the Narrative. Your choices will determine the story that unfolds."
+                </p>
+            </div>
+        </div>
+    </div>
+
   	<!-- 游戏页面 -->
   	<div id="game-screen" class="div" style="display: none;">
   		<img class="c12a808a6c0949659e2151480dbe61-icon" alt="" src="C12A808A6C0949659E2151480DBE6116[21196] 1.png">

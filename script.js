@@ -2,6 +2,11 @@
 function switchScreen(screenId) {
     // 隐藏所有屏幕
     document.getElementById('title-screen').style.display = 'none';
+    document.getElementById('opening-story1').style.display = 'none';
+    document.getElementById('opening-story2').style.display = 'none';
+    document.getElementById('opening-story3').style.display = 'none';
+    document.getElementById('opening-story4').style.display = 'none';
+    document.getElementById('opening-story5').style.display = 'none';
     document.getElementById('game-screen').style.display = 'none';
     document.getElementById('editor-screen').style.display = 'none';
     
