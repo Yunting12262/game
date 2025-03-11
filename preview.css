@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Krona One', sans-serif;
+    background-color: #fff;
+}
+
+.group-parent {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.c12a808a6c0949659e2151480dbe61-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.preview-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 1200px;
+    background-color: #292929;
+    border: 3px solid #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.preview {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    background-color: #bfbfbf;
+    border: none;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview1 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.the-nursing-home {
+    font-size: 18px;
+    color: #fff;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+}
+
+.the-nursing-home.positive {
+    background-color: rgba(0, 128, 0, 0.7);
+}
+
+.the-nursing-home.negative {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.the-nursing-home.neutral {
+    background-color: rgba(255, 165, 0, 0.7);
+}
+
+.button3, .button4 {
+    padding: 10px 20px;
+    background-color: #bfbfbf;
+    border: none;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button3:hover, .button4:hover {
+    opacity: 0.9;
+}
+
+.video-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.video-container video {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    background-color: #000;
+} 

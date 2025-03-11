@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="./index.css" />
+  	<link rel="stylesheet" href="./style.css" />
+  	<link rel="stylesheet" href="./editor.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona One:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+  	
+  	
+  	
+</head>
+<body>
+  	
+  	<div id="title-screen" class="title-screen-1-parent">
+    		<img class="title-screen-1" alt="" src="screen.png">
+    		
+    		<div class="frame-child">
+    		</div>
+    		<div class="frame-item">
+    		</div>
+    		<div class="battle-of-the">Battle of the Narrative</div>
+    		<div class="frame-inner">
+    		</div>
+    		<div class="rectangle-div">
+    		</div>
+    		<div class="new-game" onclick="switchScreen('game-screen')">New Game</div>
+    		<div class="exit">Exit</div>
+  	</div>
+  	
+  	<!-- 游戏页面 -->
+  	<div id="game-screen" class="div" style="display: none;">
+  		<img class="c12a808a6c0949659e2151480dbe61-icon" alt="" src="C12A808A6C0949659E2151480DBE6116[21196] 1.png">
+  		
+  		<!-- 左侧进度面板 -->
+  		<div class="progress-panel">
+  			<div class="progress-header">
+  				<span class="progress-count">0/5</span>
+  				<div class="window-controls">
+  					<button class="minimize">-</button>
+  					<button class="maximize">□</button>
+  					<button class="close">x</button>
+  				</div>
+  			</div>
+  			
+  			<!-- 进度数字和锁 -->
+  			<div class="progress-numbers">
+  				<div class="number">1</div>
+  				<div class="number">2</div>
+  				<div class="number">3</div>
+  				<div class="number">4</div>
+  				<div class="number">5</div>
+  			</div>
+  			
+  			<!-- 状态指示器 -->
+  			<div class="status-indicators">
+  				<div class="morality-meter">
+  					<div class="meter-label">Morality</div>
+  					<div class="meter">
+  						<span>Bad</span>
+  						<span>Neutral</span>
+  						<span>Good</span>
+  					</div>
+  				</div>
+  				
+  				<div class="surgery-funds">
+  					<div class="funds-label">Surgery Funds</div>
+  					<div class="funds-meter">
+  						<span>0</span>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+
+  		<!-- 主内容区域 -->
+  		<div class="main-content">
+  			<div class="content-header">
+  				<div class="title">Newsfeed</div>
+  				<div class="window-controls">
+  					<button class="minimize">-</button>
+  					<button class="maximize">□</button>
+  					<button class="close">x</button>
+  				</div>
+  			</div>
+
+  			<!-- 视频区域 -->
+  			<div class="video-area">
+  				<div class="video-placeholder">
+  					<div class="play-button"></div>
+  				</div>
+  				<div class="video-background"></div>
+  				<div class="video-caption">"Post A New Video First"</div>
+  				
+  				<!-- 互动按钮 -->
+  				<div class="interaction-buttons">
+  					<button class="like"><img src="heart (1) 1.png" alt="Like"></button>
+  					<button class="comment"><img src="comment1.png" alt="Comment"></button>
+  					<button class="star"><img src="star1.png" alt="Star"></button>
+  				</div>
+  			</div>
+  			
+  			<!-- 右侧信息区域 -->
+  			<div class="side-info">
+  				<div class="side-info-top">
+  					<div class="views-section">
+  						<div class="views-header">Views</div>
+  						<div class="views-count">0</div>
+  					</div>
+  					
+  					<div class="new-post-button">
+  						<div class="new-post-text">New<br>Post</div>
+  						<img src="Arrow 1.svg" alt="→" class="arrow-icon">
+  					</div>
+  				</div>
+  				
+  				<!-- Comments 区域 -->
+  				<div class="comments-section">
+  					<div class="comments-header">Comments</div>
+  					<div class="comments-content">
+  						<div class="no-comments">No Comments</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+
+  		<!-- 底部导航栏 -->
+  		<div class="bottom-nav">
+  			<button class="nav-button">
+  				<img src="image2.png" alt="Home">
+  			</button>
+  			<button class="nav-button active">
+  				Newsfeed
+  			</button>
+  		</div>
+  	</div>
+  	
+  	<!-- 编辑器页面 -->
+  	<div id="editor-screen" class="main-frame-background-parent" style="display: none;">
+  		<!-- 背景 -->
+  		<img class="c12a808a6c0949659e2151480dbe61-icon" alt="" src="C12A808A6C0949659E2151480DBE6116[21196] 1.png">
+  		
+  		<!-- 标题栏 -->
+  		<div class="header-container">
+  			<div class="header-background1"></div>
+  			<div class="header-title">Round1: Actor's scandal</div>
+  		</div>
+
+  		<!-- 编辑器主窗口 -->
+  		<div class="editor">
+  			<!-- 编辑器标题栏 -->
+  			<div class="editor-header">
+  				<div class="editor-title">Editor</div>
+  				<div class="window-controls">
+  					<button class="minimize">-</button>
+  					<button class="maximize">□</button>
+  					<button class="close">×</button>
+  				</div>
+  			</div>
+
+  			<!-- 主要内容区域 -->
+  			<div class="editor-content">
+  				<!-- Facts 区域 -->
+  				<div class="facts-section">
+  					<div class="facts-title">Facts</div>
+  					<div class="facts-text">The Delivery Man Witnesses An Elderly Person Falling And Tries To React.</div>
+  					<!-- 缩略图区域 -->
+  					<div class="thumbnails">
+  						<div id="thumbnail-0" class="thumbnail" draggable="true">
+  							<video class="thumbnail-video" autoplay loop muted playsinline>
+  								<source src="R1C1.mp4" type="video/mp4">
+  							</video>
+  							<div class="caption">Noticing This, The Caregiver Gently Holds The Elderly's Arm And Leads Them Back.</div>
+  						</div>
+  						<div id="thumbnail-1" class="thumbnail" draggable="true">
+  							<video class="thumbnail-video" autoplay loop muted playsinline>
+  								<source src="R1C2.mp4" type="video/mp4">
+  							</video>
+  							<div class="caption">Noticing This, The Caregiver Gently Holds The Elderly's Arm And Leads Them Back.</div>
+  						</div>
+  						<div id="thumbnail-2" class="thumbnail" draggable="true">
+  							<video class="thumbnail-video" autoplay loop muted playsinline>
+  								<source src="r1c3.mp4" type="video/mp4">
+  							</video>
+  							<div class="caption">Noticing This, The Caregiver Gently Holds The Elderly's Arm And Leads Them Back.</div>
+  						</div>
+  						<div id="thumbnail-3" class="thumbnail" draggable="true">
+  							<video class="thumbnail-video" autoplay loop muted playsinline>
+  								<source src="r1c4.mp4" type="video/mp4">
+  							</video>
+  							<div class="caption">The Delivery Man Drives Away.</div>
+  						</div>
+  					</div>
+  				</div>
+
+  				<!-- 编辑区域 -->
+  				<div class="editing-section">
+  					<div class="reviewing-area">
+  						<div class="reviewing-area-title">Reviewing Area</div>
+  						<button class="export-button">
+  							Export
+  							<img src="Arrow 1.svg" alt="→" class="arrow-icon">
+  						</button>
+  					</div>
+  					<div class="editing-area">
+  						<div class="editing-area-title">Editing Area</div>
+  						<div class="clips">
+  							<div class="clip-slot"></div>
+  							<div class="clip-slot"></div>
+  							<div class="clip-slot"></div>
+  							<div class="clip-slot"></div>
+  						</div>
+  						<div class="timeline">
+  							<img src="image83.png" alt="Timeline" class="timeline-container-icon">
+  							<img src="Control Panel.svg" alt="Controls" class="control-panel-icon">
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+
+  		<!-- 底部按钮 -->
+  		<div class="footer">
+  			<button class="editor-button">
+  				<img src="image2.png" alt="Editor">
+  			</button>
+  			<button class="editor-tab active">Editor</button>
+  		</div>
+  	</div>
+
+  	<div class="preview-area" style="display: none;">
+  		<div class="preview-header">
+  			<div class="round-title">Round 3: Delivery Man Accident</div>
+  		</div>
+  		<div class="preview-window">
+  			<div class="window-header">
+  				<div class="window-title">Preview</div>
+  				<div class="window-controls">
+  					<button class="minimize">-</button>
+  					<button class="maximize">□</button>
+  					<button class="close">×</button>
+  				</div>
+  			</div>
+  			<div class="preview-content">
+  				<div class="side-panel">
+  					<div class="funds-box">
+  						<div class="funds-title">Surgery Funds</div>
+  						<div class="funds-amount">+1000</div>
+  					</div>
+  				</div>
+  				<div class="main-preview">
+  					<div class="control-buttons">
+  						<button class="back-button">
+  							<span class="arrow">←</span>
+  							<span>Back</span>
+  						</button>
+  						<button class="upload-button">
+  							<span>Upload</span>
+  							<span class="arrow">→</span>
+  						</button>
+  					</div>
+  					<div class="video-container"></div>
+  					<div class="preview-title">"The Nursing Home Caregiver Fails In Their Duty Again As The Elderly Person Walks Alone Toward The Gate!"</div>
+  					<div class="preview-subtitle">The nursing home operates like a captivity system, showing no concern for the well-being of the elderly and lacking any sense of responsibility!</div>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="bottom-preview-bar">
+  			<div class="preview-tab">
+  				<img src="image2.png" alt="Preview" width="20" height="20">
+  			</div>
+  			<div class="preview-tab-text">Preview</div>
+  		</div>
+  	</div>
+
+  	<script src="script.js"></script>
+  	<script src="drag.js"></script>
+</body>
+</html>

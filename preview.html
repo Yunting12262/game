@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    
+    <link rel="stylesheet" href="./preview.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona One:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+</head>
+<body>
+    <div class="group-parent">
+        <div class="c12a808a6c0949659e2151480dbe61-parent">
+            <img class="c12a808a6c0949659e2151480dbe61-icon" alt="" src="C12A808A6C0949659E2151480DBE6116[21196] 1.png">
+            
+            <div class="group-child"></div>
+            <div class="group-item"></div>
+        </div>
+        <div class="preview-wrapper">
+            <div class="preview">
+                <div class="preview-child"></div>
+                <div class="preview-item"></div>
+                <div class="preview-inner"></div>
+                <div class="rectangle-div"></div>
+                <div class="buttons">
+                    <div class="button">
+                        <div class="buttonoutline"></div>
+                        <div class="x">x</div>
+                    </div>
+                    <div class="button1">
+                        <div class="buttonoutline"></div>
+                        <div class="button-child"></div>
+                    </div>
+                    <div class="button2">
+                        <div class="buttonoutline"></div>
+                        <div class="div">-</div>
+                    </div>
+                </div>
+                <div class="preview1">Preview</div>
+                <div id="clipTitle" class="the-nursing-home"></div>
+                <div class="button3">
+                    <div class="buttonoutline"></div>
+                    <div class="upload">Upload</div>
+                    <img class="button-item" alt="" src="Arrow 1.svg">
+                </div>
+                <div class="button4" onclick="window.history.back()">
+                    <div class="buttonoutline"></div>
+                    <div class="back">Back</div>
+                    <img class="button-inner" alt="" src="Arrow 1.svg">
+                </div>
+            </div>
+        </div>
+        <div id="videoContainer" class="video-container"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 获取URL参数
+            const urlParams = new URLSearchParams(window.location.search);
+            const sequence = urlParams.get('sequence');
+            const title = urlParams.get('title');
+            const type = urlParams.get('type');
+
+            // 设置标题
+            const titleElement = document.getElementById('clipTitle');
+            if (titleElement && title) {
+                titleElement.textContent = title;
+                titleElement.className = `the-nursing-home ${type}`;
+            }
+
+            // 返回按钮
+            const backButton = document.querySelector('.button4');
+            if (backButton) {
+                backButton.addEventListener('click', () => {
+                    window.history.back();
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

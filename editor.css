@@ -1,0 +1,1036 @@
+/* 主容器 */
+.main-frame-background-parent {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    font-family: 'Krona One';
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 背景图片 */
+.c12a808a6c0949659e2151480dbe61-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.header-container {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    width: 1808px;
+    height: 100.7px;
+    font-size: 36px;
+    color: #fff;
+} 
+
+.header-background1 {
+    position: relative;
+    top: -40px;
+    left: -45px;
+    right: 0;
+    height: 70%;
+    background-color: #000;
+    border: 3px solid #fff;
+}
+
+.header-title {
+    position: absolute;
+    top: 0%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+/* 编辑器主窗口 */
+.editor {
+    position: relative;
+    top: 60px;
+    width: 100%;
+    height: calc(100vh - 185px);
+    background-color: #9f4c81;
+    box-shadow: 10px 10px 4px rgba(37, 37, 37, 0.7);
+}
+
+/* 编辑器标题栏 */
+.editor-header {
+    height: 35px;
+    background-color: #e1c4db;
+    border: 3px solid #fff;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.editor-title {
+    top: 5px;
+    left: 20px;
+    font-size: 24px;
+    width: 900px;
+    height: 31.6px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 4px;
+}
+
+.window-controls button {
+    width: 25px;
+    height: 25px;
+    background-color: #bfbfbf;
+    border: none;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 主要内容区域 */
+.editor-content {
+    margin: 10px;
+    height: calc(100% - 65px);
+    display: flex;
+    gap: 10px;
+}
+
+/* Facts 区域 */
+.facts-section {
+    width: 25%;
+    background-color: #e1e1e1;
+    border: 3px solid #fff;
+    padding: 15px;
+}
+
+.facts-background {
+    background-color: #d9d9d9;
+    height: 100%;
+    padding: 20px;
+}
+
+.facts-title {
+    top: 55px;
+    left: 25px;
+    font-size: 24px;
+    width: 375px;
+    height: 32px;
+}
+
+.facts-text {
+    font-family: 'Inter';
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* 缩略图区域 */
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.thumbnail {
+    background-color: #bfbfbf;
+    padding: 8px;
+    box-shadow: -2px -2px 0px #9e9e9e inset, 2px 2px 0px #fff inset;
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.thumbnail img,
+.thumbnail-video {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.caption {
+    font-family: 'Inter';
+    font-size: 10px;
+    margin-top: 8px;
+    color: #000;
+}
+
+/* 编辑区域 */
+.editing-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reviewing-area {
+    height: 150px;
+    background-color: #292929;
+    border: 3px solid #fff;
+    padding: 15px;
+    position: relative;
+}
+
+.editing-area {
+    flex: 1;
+    background-color: #292929;
+    border: 3px solid #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.reviewing-area-title,
+.editing-area-title {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.export-button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background-color: #bfbfbf;
+    border: none;
+    padding: 8px 20px;
+    font-size: 18px;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 剪辑区域 */
+.clips {
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    height: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.clip-slot {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    background-color: #bfbfbf;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset;
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.clip-slot.filled {
+    background-color: #292929;
+}
+
+.clip-slot.filled video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.clip-slot.droppable {
+    background-color: rgba(191, 191, 191, 0.7);
+    border: 2px dashed #fff;
+}
+
+.clip-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    z-index: 1;
+}
+
+/* 时间轴 */
+.timeline {
+    margin-top: 255px;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-container-icon {
+    position: absolute;
+    top: 361px;
+    width: 710px;
+    height: 27.5px;
+}
+
+.control-panel-icon {
+    /* position: absolute; */
+    top: 670px;
+    left: 1001px;
+    width: 251px;
+    height: 63.6px;
+}
+
+/* 底部按钮 */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #b7b7b7;
+    border-top: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 10px;
+}
+
+.editor-button {
+    width: 45px;
+    height: 35px;
+    background-color: #bfbfbf;
+    border: none;
+    box-shadow: -1px -1px 0px #9f4c81 inset, 1px 1px 0px #fff inset;
+    cursor: pointer;
+}
+
+.editor-tab {
+    height: 35px;
+    padding: 0 15px;
+    background-color: #bfbfbf;
+    border: none;
+    box-shadow: 1px 1px 0px #9f4c81 inset, -1px -1px 0px #fff inset;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.editor-tab.active {
+    background-color: #9f4c81;
+    color: #fff;
+}
+
+/* 背景和主框架 */
+.footer-background {
+    position: absolute;
+    top: 1021px;
+    left: 0px;
+    background-color: #b7b7b7;
+    width: 1920px;
+    height: 59px;
+}
+
+.main-frame-background-child {
+    position: absolute;
+    top: 1020px;
+    left: -1px;
+    border-top: 2px solid #fff;
+    box-sizing: border-box;
+    width: 1922px;
+    height: 2px;
+}
+
+.main-frame-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 1080px;
+}
+
+/* 按钮样式 */
+.buttonoutline {
+    position: absolute;
+    height: calc(100% - 1px);
+    width: calc(100% - 1px);
+    top: 1px;
+    right: 0px;
+    bottom: 0px;
+    left: 1px;
+    background-color: #e1c4db;
+    border: 1px dashed #252525;
+    box-sizing: border-box;
+}
+
+.buttonoutline1 {
+    position: absolute;
+    height: calc(100% - 6px);
+    width: calc(100% - 5.6px);
+    top: 3px;
+    right: 2.6px;
+    bottom: 3px;
+    left: 3px;
+    background-color: #e1c4db;
+    border: 1px dashed #252525;
+    box-sizing: border-box;
+}
+
+/* 编辑器按钮 */
+.editor-button-icon {
+    position: absolute;
+    top: 6px;
+    left: 12px;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.button {
+    position: absolute;
+    top: 1029px;
+    left: 40px;
+    box-shadow: -1px -1px 0px #9f4c81 inset, 1px 1px 0px #fff inset, -2px -2px 0px rgba(171, 87, 139, 0.6) inset, 2px 2px 0px #fff inset;
+    background-color: #bfbfbf;
+    width: 55px;
+    height: 43px;
+}
+
+.editor-button-text {
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    width: 117px;
+    height: 32px;
+}
+
+.button1 {
+    position: absolute;
+    top: 1029px;
+    left: 115px;
+    box-shadow: 1px 1px 0px #9f4c81 inset, -2px -2px 0px #fff inset, 2px 2px 0px rgba(171, 87, 139, 0.6) inset, -1px -1px 0px #fff inset;
+    background-color: #bfbfbf;
+    width: 342px;
+    height: 43px;
+}
+
+/* 主内容区域 */
+.main-content-background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #9f4c81;
+    width: 1813px;
+    height: 803.7px;
+}
+
+.header-background {
+    position: absolute;
+    top: 15.45px;
+    left: 21.47px;
+    background-color: #e1c4db;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    width: 1761.2px;
+    height: 71.9px;
+}
+
+.main-content-background1 {
+    position: absolute;
+    top: 95.55px;
+    left: 21px;
+    background-color: #292929;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    width: 1762px;
+    height: 687px;
+}
+
+/* 按钮组件 */
+.buttonoutline4 {
+    position: absolute;
+    height: calc(100% - 6px);
+    width: calc(100% - 5.6px);
+    top: 3px;
+    right: 2.6px;
+    bottom: 3px;
+    left: 3px;
+    border: 1px dashed #252525;
+    box-sizing: border-box;
+}
+
+/* 窗口控制按钮 */
+.close-button-text,
+.minimize-button-text {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+}
+
+.button2,
+.button3,
+.button4 {
+    position: absolute;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset, -2px -2px 0px #9e9e9e inset, 2px 2px 0px #fff inset;
+    background-color: #bfbfbf;
+}
+
+.button2 { left: 88px; }
+.button3 { left: 44px; }
+.button4 { left: 0px; }
+
+/* 按钮组 */
+.buttons {
+    position: absolute;
+    top: 31px;
+    left: 1629px;
+    width: 128px;
+    height: 40px;
+    font-size: 24px;
+}
+
+/* 标题文本 */
+.editor-title,
+.facts-title,
+.reviewing-area-title,
+.editing-area-title {
+    /* position: absolute; */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.editor-title {
+    top: 5px;
+    left: 20px;
+    font-size: 24px;
+    width: 900px;
+    height: 31.6px;
+}
+
+.facts-title {
+    top: 55px;
+    left: 25px;
+    font-size: 24px;
+    width: 375px;
+    height: 32px;
+}
+
+.reviewing-area-title,
+.editing-area-title {
+    font-size: 16px;
+    color: #fff;
+    width: 375px;
+    height: 32px;
+}
+
+
+
+
+.button5,
+.button6,
+.button7,
+.button8 {
+    position: absolute;
+    top: 0px;
+    width: 267px;
+    height: 267px;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset, -2px -2px 0px #9e9e9e inset, 2px 2px 0px #fff inset;
+    background-color: #bfbfbf;
+}
+
+.button5 { left: 587.4px; }
+.button6 { left: 293.7px; }
+.button7 { left: 0px; }
+.button8 { left: 881px; }
+
+/* 缩略图容器 */
+.thumbnail-container-icon {
+    position: absolute;
+    top: 0px;
+    left: -26px;
+    width: 192.8px;
+    height: 147px;
+    object-fit: contain;
+}
+
+/* 导出按钮 */
+.button13 {
+    position: absolute;
+    top: 157px;
+    left: 1421.23px;
+    box-shadow: -1.7px -1.7px 0px #292929 inset, 1.7px 1.7px 0px #fff inset, -3.4px -3.4px 0px #9e9e9e inset, 3.4px 3.4px 0px #fff inset;
+    background-color: #bfbfbf;
+    width: 289.8px;
+    height: 75px;
+    font-size: 23.86px;
+}
+
+/* 控制面板和时间轴 */
+/* 移除重复的 timeline-container-icon 定义 */
+
+/* 标题容器 */
+
+/* 拖拽相关样式 */
+.thumbnail.dragging {
+    cursor: grabbing;
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+.thumbnail-video {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    background-color: #292929;
+    display: block;
+}
+
+.clip-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #292929;
+    display: block;
+}
+
+.clip-slot {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    background-color: #bfbfbf;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset;
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.clip-slot.filled {
+    background-color: #292929;
+}
+
+.clip-slot.filled video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.clip-slot.draggable {
+    cursor: move;
+    opacity: 0.9;
+}
+
+.clip-slot.droppable {
+    background-color: rgba(191, 191, 191, 0.7);
+    border: 2px dashed #fff;
+}
+
+.clip-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    z-index: 1;
+}
+
+.clip-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #bfbfbf;
+    border: none;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.clip-slot:not(:first-child) .clip-close::before {
+    content: '×';
+    color: #292929;
+}
+
+.clip-slot:last-child {
+    position: relative;
+}
+
+.clip-slot:last-child::after {
+    content: none;
+}
+
+.clip-slot.fixed {
+    cursor: not-allowed;
+    border: 2px solid #4a90e2;
+}
+
+.clip-slot.disabled {
+    background-color: #9e9e9e;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.rub-icon-bg {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(128, 128, 128, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.rub-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url('rub.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clip-slot:first-child .clip-close {
+    display: none;
+}
+
+/* 剪辑标题样式 */
+.clip-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding: 15px 25px;
+    border-radius: 5px;
+    max-width: 80%;
+    font-weight: bold;
+    font-size: 24px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.clip-title::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clip-title.positive::before {
+    content: '😊';
+    font-size: 32px;
+}
+
+.clip-title.neutral::before {
+    content: '😐';
+    font-size: 32px;
+}
+
+.clip-title.negative::before {
+    content: '😞';
+    font-size: 32px;
+}
+
+.clip-title.unprejudiced::before {
+    content: '🤔';
+    font-size: 32px;
+}
+
+/* 第一个clip slot不显示关闭按钮 */
+.clip-slot:first-child .clip-close {
+    display: none;
+}
+
+/* 预览区域样式 */
+.preview-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("C12A808A6C0949659E2151480DBE6116[21196] 1.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 1000;
+    font-family: 'Krona One';
+}
+
+.preview-header {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    width: 1808px;
+    height: 100.7px;
+    font-size: 36px;
+    color: #fff;
+}
+
+.preview-header::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: -45px;
+    right: 0;
+    height: 70%;
+    background-color: #000;
+    border: 3px solid #fff;
+    z-index: -1;
+}
+
+.round-title {
+    position: absolute;
+    top: 0%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.preview-window {
+    position: relative;
+    top: 90px;
+    width: 96%;
+    height: calc(100vh - 185px);
+    background-color: #9f4c81;
+    box-shadow: 10px 10px 4px rgba(37, 37, 37, 0.7);
+    margin: 0 20px;
+}
+
+.window-header {
+    height: 35px;
+    background-color: #e1c4db;
+    border: 3px solid #fff;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.window-title {
+    font-family: 'Krona One';
+    font-size: 24px;
+    color: #000;
+}
+
+.preview-content {
+    margin: 10px;
+    height: calc(100% - 65px);
+    display: flex;
+    gap: 10px;
+    background-color: #292929;
+    border: 3px solid #fff;
+}
+
+.side-panel {
+    width: 25%;
+    background-color: #e1e1e1;
+    border: 3px solid #fff;
+    padding: 15px;
+}
+
+.funds-box {
+    background-color: #d9d9d9;
+    height: 80%;
+    padding: 20px;
+    position: relative;
+}
+
+.funds-box .funds-title {
+    font-family: 'Krona One';
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.funds-box .funds-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -20px;
+    width: calc(100% + 40px);
+    background-color: #e1c4db;
+    border: 2px solid #951c26;
+    box-sizing: border-box;
+    height: 50.7px;
+    z-index: -1;
+}
+
+.funds-box .funds-text {
+    font-family: 'Inter';
+    font-size: 16px;
+    color: #000;
+    text-align: left;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+.funds-title {
+    font-family: 'Krona One';
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.funds-amount {
+    font-family: 'Krona One';
+    font-size: 36px;
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main-preview {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.back-button,
+.upload-button {
+    background-color: #bfbfbf;
+    border: none;
+    padding: 8px 20px;
+    font-size: 18px;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Krona One';
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.video-wrapper {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    background-color: #bfbfbf;
+    box-shadow: -1px -1px 0px #292929 inset, 1px 1px 0px #fff inset;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview-title {
+    font-family: 'Krona One';
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
+}
+
+.preview-subtitle {
+    font-family: 'Inter';
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+.bottom-preview-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #b7b7b7;
+    border-top: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+
+.preview-tab {
+    width: 45px;
+    height: 35px;
+    background-color: #bfbfbf;
+    border: none;
+    box-shadow: -1px -1px 0px #9f4c81 inset, 1px 1px 0px #fff inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-tab-text {
+    height: 35px;
+    padding: 0 15px;
+    background-color: #9f4c81;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-family: 'Krona One';
+}

@@ -1,0 +1,15 @@
+<svg width="250" height="64" viewBox="0 0 250 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Control Panel">
+<path id="Polygon 1" d="M98 31.5352L68 48.8557V14.2146L98 31.5352Z" fill="white"/>
+<path id="Polygon 4" d="M250 31.5352L220 48.8557V14.2146L250 31.5352Z" fill="white"/>
+<path id="Polygon 3" d="M232 31.5352L202 48.8557V14.2146L232 31.5352Z" fill="white"/>
+<path id="Polygon 5" d="M0 30.5352L30 47.8557L30 13.2146L0 30.5352Z" fill="white"/>
+<path id="Polygon 6" d="M18 30.5352L48 47.8557V13.2146L18 30.5352Z" fill="white"/>
+<g id="Polygon 2">
+<path d="M152.91 15.9104H184.73V47.7302H152.91V15.9104Z" fill="white"/>
+<path d="M152.91 15.9104H184.73V47.7302H152.91V15.9104Z" fill="white"/>
+</g>
+<line id="Line 54" x1="128.5" y1="14" x2="128.5" y2="49" stroke="white" stroke-width="7"/>
+<line id="Line 55" x1="116.5" y1="14" x2="116.5" y2="49" stroke="white" stroke-width="7"/>
+</g>
+</svg>
