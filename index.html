@@ -14,7 +14,14 @@
   	
 </head>
 <body>
-  	
+    <!-- 开场音乐 -->
+    <audio id="opening-music" loop preload="auto">
+        <source src="开始.MP3" type="audio/mpeg">
+    </audio>
+    <!-- 游戏BGM -->
+    <audio id="game-bgm" loop preload="auto">
+        <source src="BGM.MP3" type="audio/mpeg">
+    </audio>
   	<div id="title-screen" class="title-screen-1-parent">
     		<img class="title-screen-1" alt="" src="screen.png">
     		
@@ -111,13 +118,20 @@
         </div>
 
         <div id="tutorial-3" class="tutorial-overlay" onclick="nextTutorial(3)">
-            <div class="tutorial-highlight numbers-highlight" style="left: 50px; top: 200px; width: 400px; height: 400px;"></div>
-            <div class="tutorial-text no-bg" style="left: 500px; top: 280px;">
-                Here you would see the change in the impact values of the rounds you experience!
+            <div class="tutorial-highlight numbers-highlight" style="right: 200px; top: 140px; width: 340px; height: 400px;"></div>
+            <div class="tutorial-text no-bg" style="right: 600px; top: 80px;">
+				Views and comments represent how much viewers like your news, and the higher the number of views, the more money you'll make from your videos!
             </div>
         </div>
 
         <div id="tutorial-4" class="tutorial-overlay" onclick="nextTutorial(4)">
+            <div class="tutorial-highlight numbers-highlight" style="left: 30px; top: 200px; width: 400px; height: 400px;"></div>
+            <div class="tutorial-text no-bg" style="left: 450px; top: 280px;">
+				Here you can see the surgery funds of mom.Do more breaking news to make more money! 
+            </div>
+        </div>
+
+        <div id="tutorial-5" class="tutorial-overlay" onclick="nextTutorial(5)">
             <div class="tutorial-highlight numbers-highlight" style="right: 80px; top: 140px; width: 240px; height: 140px;"></div>
             <div class="tutorial-text no-bg" style="right: 100px; top: 80px;">
                 Click "New Post" to start creating your first video!
@@ -143,7 +157,7 @@
         <div id="post-round-tutorial-3" class="tutorial-overlay" onclick="nextPostRoundTutorial(3)">
             <div class="tutorial-highlight numbers-highlight" style="right: 80px; top: 300px; width: 300px; height: 400px;"></div>
             <div class="tutorial-text no-bg" style="right: 400px; top: 400px;">
-                You could pay more attention to the comments and views of the video to learn lessons for your next video editing.
+                You've already gotten some views and comments, try generating more heat in the next round!
             </div>
         </div>
 
@@ -265,7 +279,7 @@
             <div class="tutorial-highlight numbers-highlight" style="left: 30px; top: 140px; width: 400px; height: 100px;"></div>
             <div class="tutorial-text no-bg" style="left: 470px; top: 150px;">
                 And this is actual fact of this story.
-				As an editor, you can decide how to tell the story to get the results you want.
+				As an editor, you can choose to honor that fact or create a new story.
             </div>
         </div>
 

@@ -1,5 +1,29 @@
 // 页面切换功能
 function switchScreen(screenId) {
+    // 音乐控制
+    const openingMusic = document.getElementById('opening-music');
+    const gameBGM = document.getElementById('game-bgm');
+
+    if (screenId === 'game-screen') {
+        // 停止开场音乐，开始播放游戏BGM
+        if (openingMusic) {
+            openingMusic.pause();
+            openingMusic.currentTime = 0;
+        }
+        if (gameBGM) {
+            gameBGM.play().catch(error => console.log('游戏BGM播放失败:', error));
+        }
+    } else if (['title-screen', 'opening-story1', 'opening-story2', 'opening-story3', 'opening-story4', 'opening-story5'].includes(screenId)) {
+        // 在标题和开场故事页面播放开场音乐
+        if (gameBGM) {
+            gameBGM.pause();
+            gameBGM.currentTime = 0;
+        }
+        if (openingMusic) {
+            openingMusic.play().catch(error => console.log('开场音乐播放失败:', error));
+        }
+    }
+
     // 隐藏所有屏幕
     document.getElementById('title-screen').style.display = 'none';
     document.getElementById('opening-story1').style.display = 'none';
@@ -19,7 +43,7 @@ function switchScreen(screenId) {
         document.getElementById(screenId).style.display = 'block';
     }
 
-    // 如果切换到游戏屏幕，根据情况显示不同的教程
+    // 处理教程显示
     if (screenId === 'game-screen') {
         // 如果是第一次进入游戏页面，显示初始教程
         if (!hasShownTutorial) {
@@ -95,7 +119,7 @@ function nextTutorial(current) {
         currentTutorialElement.style.display = 'none';
     }
     
-    if (current < 4) {
+    if (current < 6) {
         // 显示下一个教程
         showTutorial(current + 1);
     }
@@ -205,6 +229,58 @@ function nextPostRoundTutorial(current) {
 
 // 初始化事件监听器
 document.addEventListener('DOMContentLoaded', function() {
+    // 音乐控制
+    const openingMusic = document.getElementById('opening-music');
+    const gameBGM = document.getElementById('game-bgm');
+    
+    // 设置音量
+    openingMusic.volume = 0.5;
+    gameBGM.volume = 0.5;
+
+    // 强制播放音乐的函数
+    function playOpeningMusic() {
+        const playPromise = openingMusic.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                console.log('开场音乐开始播放');
+            }).catch(() => {
+                console.log('开场音乐自动播放失败，重试中...');
+                setTimeout(playOpeningMusic, 100);
+            });
+        }
+    }
+
+    // 多种方式触发播放
+    function tryPlayingMusic() {
+        // 方法1: 直接尝试播放开场音乐
+        playOpeningMusic();
+
+        // 方法2: 用户交互时尝试播放
+        document.addEventListener('click', function() {
+            if (openingMusic.paused && document.getElementById('title-screen').style.display !== 'none') {
+                playOpeningMusic();
+            }
+        }, { once: false });
+
+        // 方法3: 触摸事件时尝试播放
+        document.addEventListener('touchstart', function() {
+            if (openingMusic.paused && document.getElementById('title-screen').style.display !== 'none') {
+                playOpeningMusic();
+            }
+        }, { once: false });
+
+        // 方法4: 键盘事件时尝试播放
+        document.addEventListener('keydown', function() {
+            if (openingMusic.paused && document.getElementById('title-screen').style.display !== 'none') {
+                playOpeningMusic();
+            }
+        }, { once: false });
+    }
+
+    // 启动播放尝试
+    tryPlayingMusic();
+
     // Export 按钮点击事件
     const exportButton = document.querySelector('.export-button');
     if (exportButton) {
